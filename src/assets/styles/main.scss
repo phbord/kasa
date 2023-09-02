@@ -1,0 +1,28 @@
+/* Libraries */
+@import "/node_modules/normalize.css/normalize.css";
+@import "./lib/tiny-grid.scss";
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+/* Core */
+@import "./core/variables";
+@import "./core/mixins";
+@import "./core/commons";
+@import "./core/buttons";
+@import "./core/star";
+@import "./core/card";
+@import "./core/tag";
+@import "./core/avatar";
+@import "./core/loader";
+
+/* Components */
+@import "./components/layout";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/home";
+@import "./components/about";
+@import "./components/accomodation";
+@import "./components/not-found";
+@import "./components/full-picture-presentation";
+@import "./components/acordion";
+@import "./components/carousel";
+@import "./components/message";

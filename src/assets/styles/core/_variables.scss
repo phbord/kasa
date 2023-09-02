@@ -1,0 +1,22 @@
+/* COLORS */
+$red: #FF6060;
+$light: #fff;
+$dark: #000;
+$grey: #F6F6F6;
+$grey-middle: #C4C4C4;
+$red-gradient: linear-gradient(180deg, $red 0%, rgba(0,0,0,.5) 100%);
+
+/* FONTS */
+$default-font: 'Montserrat', sans-serif;
+
+/* SIZES */
+$sm: 600px;
+$md: 900px;
+$lg: 1200px;
+$xl: 1800px;
+$loader-size: 5rem;
+
+/* TIMES */
+$default-transition: 300ms;
+$acordion-transition: 600ms;
+$carousel-transition: 600ms;

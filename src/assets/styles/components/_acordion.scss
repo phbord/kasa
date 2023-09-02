@@ -1,0 +1,92 @@
+.acordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    width: 100%;
+    padding: 1rem 1.25rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+    background-color: $red;
+  }
+}
+
+.acordion-item {
+  width: 100%;
+  max-width: 102.3rem;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 500;
+
+  button {
+    color: $light;
+  }
+
+  &.is-opened {
+    .acordion-action img {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.acordion-action {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  img {
+    width: 1.6rem;
+    @include transition;
+  }
+}
+
+.acordion-body {
+  height: auto;
+  padding: 2rem;
+  opacity: 1;
+  border-radius: 1rem 1rem .5rem .5rem;
+  background-color: $grey;
+  color: $red;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  @include transition;
+
+  &.is-hidden {
+    height: 0;
+    padding: 0 2rem;
+    opacity: 0;
+    background-color: transparent;
+    color: transparent;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+@media (min-width: $md) {
+  .acordion {
+    button {
+      padding: 1rem 2rem 1rem 1.5rem;
+    }
+  }
+
+  .acordion-item {
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+  }
+
+  .acordion-action {
+    img {
+      width: 3.2rem;
+    }
+  }
+
+  .acordion-body {
+    font-size: 1.8rem;
+  }
+}

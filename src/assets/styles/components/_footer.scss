@@ -1,0 +1,44 @@
+.footer {
+  margin-top: auto;
+  padding: 6.6rem 1.6rem 5.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark;
+}
+
+.footer-link-logo {
+  display: block;
+}
+
+.footer-logo {
+  width: 12.2rem;
+  margin-bottom: .5rem;
+}
+
+.footer-desc {
+  width: 13.4rem;
+  display: inline-block;
+  color: $light;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  text-align: center;
+}
+
+@media (min-width: $md) {
+  .footer {
+    padding: 6.6rem 3.2rem 2.9rem;
+  }
+
+  .footer-logo {
+    margin-bottom: 2.9rem;
+  }
+
+  .footer-desc {
+    width: auto;
+    font-size: 2.4rem;
+  }
+}

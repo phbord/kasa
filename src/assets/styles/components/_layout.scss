@@ -1,0 +1,26 @@
+body,#root {
+  min-height: 100vh;
+}
+
+html {
+  font-family: $default-font;
+  font-size: 62.5%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}

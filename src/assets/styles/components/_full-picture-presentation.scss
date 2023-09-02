@@ -1,0 +1,35 @@
+.full-picture-presentation {
+  height: 11.1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  background-color: rgba($color: $dark, $alpha: .30000001192092896);
+  background-position-x: right;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: darken;
+  color: $light;
+
+  & h2 {
+    width: 22rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 0 1.6rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: $md) {
+  .full-picture-presentation {
+    height: 22.3rem;
+    justify-content: center;
+
+    & h2 {
+      width: auto;
+      padding: 0 3.2rem;
+      font-size: 4.8rem;
+    }
+  }
+}
