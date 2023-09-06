@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route, Navigate } from'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from'react-router-dom'
 
 import './assets/styles/main.scss'
 import Layout from './Layout.jsx'
@@ -13,7 +13,7 @@ import Loader from './components/ui/Loader'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
           {/* Pages */}
@@ -30,6 +30,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                   element={<Suspense fallback={Loader}><Navigate to="/error" /></Suspense>} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 )
