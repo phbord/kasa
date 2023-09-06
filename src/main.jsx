@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/kasa' element={<Layout />}>
+        <Route path='/' element={<Layout />}>
           {/* Pages */}
           <Route index 
                   element={<Suspense fallback={Loader}><Home /></Suspense>} />
