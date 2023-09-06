@@ -24,8 +24,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/accomodation/:idSlug' 
                   element={<Suspense fallback={Loader}><Accomodation /></Suspense>} />
           {/* Errors 404 page */}
-          {/* <Route path='/error' 
-                  element={<Suspense fallback={Loader}><ErrorBoundary /></Suspense>} /> */}
+          <Route path='/error' 
+                  element={<Suspense fallback={Loader}><ErrorBoundary /></Suspense>} />
           <Route path='*' 
                   element={<Suspense fallback={Loader}><Navigate to="/error" /></Suspense>} />
         </Route>
