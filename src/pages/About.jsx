@@ -5,7 +5,6 @@ import { useDataFile } from "../utils/hooks/useDataFile"
 
 import BgImg from '../assets/images/bg-accomodation.webp'
 import AcordionAbout from '../components/ui/AcordionAbout'
-import Transitions from '../components/ui/Transitions'
 import Message from '../components/ui/Message'
 
 
@@ -19,7 +18,7 @@ const About = () => {
   </section>
 
   return (
-    <Transitions>
+    <>
       {/* PICTURE block */}
       <section className='home-intro'>
         <FullPicturePresention bgImg={BgImg} />
@@ -29,7 +28,7 @@ const About = () => {
       {
         error ? message : list
       }
-    </Transitions>
+    </>
   )
 }
 

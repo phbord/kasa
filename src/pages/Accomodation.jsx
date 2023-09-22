@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { v4 as uuidv4 } from 'uuid'
 
 import accomodationsData from '../assets/data/accomodations.json'
 import createRatingArray from '../utils/functions/createRatingArray'
@@ -12,7 +11,6 @@ import Avatar from '../components/ui/Avatar'
 import Star from '../components/ui/Star'
 import AcordionAccomodation from '../components/ui/AcordionAccomodation'
 import Carousel from '../components/ui/Carousel'
-import Transitions from '../components/ui/Transitions'
 
 
 const Accomodation = () => {
@@ -30,8 +28,13 @@ const Accomodation = () => {
     !dataFound && navigate('/error')
   }, [])
 
+  useEffect(() => {
+    dataFound && setRatingNum(createRatingArray(dataFound))
+    !dataFound && navigate('/error')
+  }, [idSlug])
+
   return (
-    <Transitions>
+    <>
       {
         !error && currentData && (
           <>
@@ -51,8 +54,8 @@ const Accomodation = () => {
                   {/* TAGS list */}
                   <ul className='tags-list'>
                     {
-                      currentData.tags && currentData.tags.map((tag) => (
-                        <li key={uuidv4()}>
+                      currentData.tags && currentData.tags.map((tag, index) => (
+                        <li key={index}>
                           <Tag tag={tag} />
                         </li>
                       ))
@@ -69,10 +72,10 @@ const Accomodation = () => {
                     <figure className='card-rating-list'>
                       {/* STARS */}
                       {
-                        ratingNum && ratingNum.map((item) => (
+                        ratingNum && ratingNum.map((item, index) => (
                           item
-                            ? (<Star key={uuidv4()} color={colors.red} />)
-                            : (<Star key={uuidv4()} color={colors.grey} />)
+                            ? (<Star key={index} color={colors.red} />)
+                            : (<Star key={index} color={colors.grey} />)
                         ))
                       }
                     </figure>
@@ -89,7 +92,7 @@ const Accomodation = () => {
           </>
         )
       }
-    </Transitions>
+    </>
   )
 }
 

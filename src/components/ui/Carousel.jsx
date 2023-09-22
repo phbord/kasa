@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { v4 as uuidv4 } from 'uuid'
 
 import Arrow from '../../assets/images/arrow.svg'
 
@@ -46,18 +45,18 @@ const Carousel = ({data}) => {
         {/* C A R O U S E L */}
         <ul className="carousel-list">
           {
-            imgList && imgList.map((imgUrl, i) => (
-              (i === 0)
+            imgList && imgList.map((imgUrl, index) => (
+              (index === 0)
                 ? (
-                  <li key={uuidv4()} 
+                  <li key={index} 
                       className="carousel-item"
                       style={{ 
                         backgroundImage: `url(${imgUrl.replace(/&quot;/g,'')})`,
-                        marginLeft: `${marginLeft}`
+                        marginLeft: marginLeft
                     }}></li>
                 )
                 : (
-                  <li key={uuidv4()} 
+                  <li key={index} 
                       className="carousel-item"
                       style={{ backgroundImage: `url(${imgUrl.replace(/&quot;/g,'')})` }}></li>
                 )
